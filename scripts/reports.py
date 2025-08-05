@@ -43,7 +43,8 @@ def get_all_numeric_reports(table_list, folder):
     
     print(total_report_df)
 
-eda_report('appearances', 'raw')
+eda_report('club_games', 'raw')
+numeric_columns_report('club_games', 'raw')
 #get_all_eda_reports(table_list, 'raw')
 # numeric_columns_report('players', 'raw')
 # numeric_columns_report('clubs', 'raw')
