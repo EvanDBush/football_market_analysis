@@ -21,15 +21,15 @@ def eda_report(table_name, folder):
     
     The column names are: \n{', '.join(df.columns)} 
         ''')
+
 def numeric_columns_report(table_name, folder):
     df = create_dataframe(table_name, folder)
     df = df.add_prefix(table_name + '.')
     descriptive_df = df.describe().round(2).T
+    print(descriptive_df)
     return descriptive_df
     
     
-
-
 def get_all_eda_reports(table_list, folder):
     for table in table_list:
         eda_report(table, folder )
@@ -43,7 +43,9 @@ def get_all_numeric_reports(table_list, folder):
     
     print(total_report_df)
 
-#eda_report('appearances', 'raw')
+eda_report('appearances', 'raw')
 #get_all_eda_reports(table_list, 'raw')
-#numeric_columns_report('players', 'raw')
-get_all_numeric_reports(table_list, 'raw')
+# numeric_columns_report('players', 'raw')
+# numeric_columns_report('clubs', 'raw')
+# numeric_columns_report('player_valuations', 'raw')
+#get_all_numeric_reports(table_list, 'raw')
