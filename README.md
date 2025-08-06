@@ -12,3 +12,14 @@ Installation Instructions:
 5. run cleaning script
 
 6. run uploading script
+
+Project Goals:
+    Provide market value overview of clubs in the data available.
+        a. Separate by league 
+        b. identify top 4 clubs in each league for transfers and  
+    Compare top 5 european clubs in player value, club market value and transfer expenditures. 
+    explore and prepare entire dataset for a range of future personal projects
+    clean the dataset
+    create a local db of cleaned data
+    prepare sql queries to use on db
+    *use kaggle api to download project data automatically
