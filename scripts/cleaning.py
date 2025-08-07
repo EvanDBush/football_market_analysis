@@ -33,11 +33,15 @@ print('Cleaned club games table written to csv')
 
 #__Clubs Table____________________________________
 
+#read csv to dataframe
+clubs_df = pd.read_csv('./data/raw/clubs.csv')
 # calculate club market value
 # use player valuations and current club id
 # replace missing average age with domestic league average age.
 # drop url and filename columns
 # calculate missing foreigners percentage from squad size and foreigners number.
+clubs_df.to_csv('./data/clean/clubs.csv')
+print('Cleaned clubs table written to csv')
 
 # Competitions Table
 
@@ -137,7 +141,7 @@ players_df['country_of_citizenship'] = players_df['country_of_citizenship'].fill
 players_df['sub_position'] = players_df['sub_position'].fillna('none')
 # fill null in foot with "unavailable"
 players_df['foot'] = players_df['foot'].fillna('unavailable')
-# fill null in height with avgerage height
+# fill null in height with average height
 average_height = players_df['height_in_cm'].mean()
 players_df['height_in_cm'] = players_df['height_in_cm'].fillna(average_height)
 # fill null in contract_expiration_date with '1901-01-01'
