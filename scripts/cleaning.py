@@ -48,8 +48,8 @@ print('Cleaned clubs table written to csv')
 #read csv to dataframe
 competitions_df = pd.read_csv('./data/raw/competitions.csv')
 # fill null values in country_name and domestic_league_code with "none" 
-competitions_df['country_name'] = competitions_df['country_name'].fillna('none')
-competitions_df['domestic_league_code'] = competitions_df['domestic_league_code'].fillna('none')
+competitions_df['country_name'] = competitions_df['country_name'].fillna('unavailable')
+competitions_df['domestic_league_code'] = competitions_df['domestic_league_code'].fillna('unavailable')
 # write dataframe to clean csv
 competitions_df.to_csv('./data/clean/competitions.csv', index=False)
 print('Cleaned competitions table written to csv')
@@ -61,7 +61,7 @@ game_events_df = pd.read_csv('./data/raw/game_events.csv')
 #convert date to datetime dtype
 game_events_df['date'] = pd.to_datetime(game_events_df['date'])
 # fill missing description with "none"
-game_events_df['description'] = game_events_df['description'].fillna('none')
+game_events_df['description'] = game_events_df['description'].fillna('unavailable')
 # fill missing player_in_id with 0
 game_events_df['player_in_id'] = game_events_df['player_in_id'].fillna(0)
 # fill player assist id with 0
@@ -138,7 +138,7 @@ players_df['city_of_birth'] = players_df['city_of_birth'].fillna('unavailable')
 # fill null in country_of_citizenship with "unavailable"
 players_df['country_of_citizenship'] = players_df['country_of_citizenship'].fillna('unavailable') 
 # fill null in sub-position with "none"
-players_df['sub_position'] = players_df['sub_position'].fillna('none')
+players_df['sub_position'] = players_df['sub_position'].fillna('unavailable')
 # fill null in foot with "unavailable"
 players_df['foot'] = players_df['foot'].fillna('unavailable')
 # fill null in height with average height
