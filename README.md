@@ -23,3 +23,13 @@ Project Goals:
     create a local db of cleaned data
     prepare sql queries to use on db
     *use kaggle api to download project data automatically
+
+    calculate club market value column in clubs
+    find top selling clubs
+    find top buying clubs
+
+    find club selling totals by league
+    find club buying totals by league
+
+    calculate most valued players by league
+    find players total selling fees over career
