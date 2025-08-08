@@ -60,4 +60,4 @@ def get_all_numeric_reports(table_list, folder):
 # numeric_columns_report('clubs', 'raw')
 # numeric_columns_report('player_valuations', 'raw')
 #get_all_numeric_reports(table_list, 'raw')
-eda_info_describe('games', 'raw')
+#eda_info_describe('games', 'raw')

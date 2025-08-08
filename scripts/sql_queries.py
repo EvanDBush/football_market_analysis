@@ -3,6 +3,10 @@ import pandas as pd
 
 query = 'SELECT * FROM games LIMIT 10'
 
+# Joined table queries
+
+
+
 def query_db(query):
 
     with sqlite3.connect('./football.db') as football_db:
