@@ -16,8 +16,21 @@ JOIN
 GROUP BY
     clubs.name
 ORDER BY 
-    club_market_value DESC;
+    club_market_value DESC
+LIMIT 
+    10;
 """
+player_recent_date_query = """
+
+SELECT 
+    player_id,
+    MAX(date) AS most_recent_date
+FROM 
+    player_valuations
+GROUP BY
+    player_id
+"""
+
 
 def query_db(query):
 
