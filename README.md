@@ -1,5 +1,7 @@
 #Football Market Analysis
 
+Data collected from https://www.kaggle.com/datasets/davidcariboo/player-scores/data
+
 
 ### Setup Instructions:
 
@@ -10,7 +12,7 @@ to download from github [here] (https://github.com/EvanDBush/football_market_ana
 3. Open the folder in your IDE of choice to run and review the project files.
 4. In the terminal, create a virtual environment by running the command:
 ``` python -m venv myenv ``` you can replace 'myenv' with the name of your choice. 
-5. Activate the envirionment according to your command shell. For windows use the command:
+5. Activate the environment according to your command shell. For windows, use the command:
 ```myenv\Scripts\activate``` For macOS/linux use:
 ```source myenv/bin/activate ``` When activated, most command shells will indicate the virtual environment name in parenthesis.
 6. Install the project dependencies using the command: 
