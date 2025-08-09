@@ -20,8 +20,11 @@ def clean_clubs(df):
     
     # use player valuations and current club id
     # replace missing average age with domestic league average age.
+    df['average_age'] = df['average_age'].fillna(df.groupby('domestic_competition_id').transform('mean'))
     # drop url and filename columns
+    df = df.drop(columns=['url', 'filename'])
     # calculate missing foreigners percentage from squad size and foreigners number.
+    df['foreigners_percentage'] = df['foreigners_percentage'].fillna(df['foreigners_number']/df['squad_size'])
     df.to_csv('./data/clean/clubs.csv')
     print('Cleaned clubs table written to csv')
     
