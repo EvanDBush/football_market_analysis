@@ -36,6 +36,7 @@ def query_db(query):
 
     with sqlite3.connect('./football.db') as football_db:
         df = pd.read_sql(query, football_db)
-    print(df)
+    return df 
+    
 
 query_db(club_value_query)
